@@ -278,7 +278,7 @@ wdi=# SELECT * FROM students;
 
 ```
 
-## Independent Practice - 10 mins
+## Independent Practice - 20 mins
 
 There's _no way_ you're going to remember the exact syntax of everything we just did, but let's practice a habit you should have been doing since week 1: finding and reading documentation. Checkout [this PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/) and using the same database and datatable of users, get through a many of these SQL challenges as possible in the next 10 minutes:
 
@@ -293,25 +293,3 @@ There's _no way_ you're going to remember the exact syntax of everything we just
 - Get a list of students whose first name begins with the letter "J"
 - Get a list of student names who live in NY or MA
 
-## Conclusion - 5 minutes
-
-When we finally hook our apps up to databases - especially with Rails - we will have a whole slew of shortcuts we can use to get the data we need? So, wait, why the heck are we practicing SQL?  Well, let's look at what happens when you call for a particular user from a users table - with some nifty methods - in a Rails environment when you're connected to a database:
-
-``` ruby
-User.last
-  User Load (1.5ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
-=> #<User id: 1, first_name: "jay", last_name: "nappy"...rest of object >
-```
-
-There's SQL!!!
-
-``` SQL
-SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
-```
-
-The Ruby/Rails scripts get converted to raw SQL before querying the database.  You'll know the underlying concepts and query language for how the data you ask for gets returned to you.
-
-Answer these questions:
-
-- How does SQL relate to relational databases?
-- What kinds of boolean and conditional operators can we use in SQL?
