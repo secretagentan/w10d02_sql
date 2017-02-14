@@ -57,7 +57,8 @@ Now that we have a database, let's create a table (think of this like, "hey now 
 wdi=# CREATE TABLE instructors (
 wdi(#  ID          INT   PRIMARY KEY   NOT NULL,
 wdi(#  NAME        TEXT                NOT NULL,
-wdi(#  WEBSITE     CHAR(50);
+wdi(#  WEBSITE     CHAR(50)
+wdi(#  );
 CREATE TABLE
 ```
 
@@ -263,7 +264,7 @@ wdi=# SELECT * FROM students;
 But wait, actually, she just cancelled - no big!
 
 ``` psql
-wdi=# DELETE FROM students where name = 'Miss Take';
+wdi=# DELETE FROM students WHERE name = 'Miss Take';
 DELETE 1
 
 wdi=# SELECT * FROM students;
